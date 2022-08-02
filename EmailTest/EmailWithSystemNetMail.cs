@@ -30,8 +30,6 @@ public class EmailWithSystemNetMail
 
         using (StreamWriter sw = new StreamWriter(_logFile, true))
         {
-            sw.WriteLine($"{currTime1.ToString("HH:mm:ss.ff")} Start ({_testVersion}) ---Async");
-
             int i = 0;
 
             using (SmtpClient smtp = new SmtpClient())
@@ -70,8 +68,6 @@ public class EmailWithSystemNetMail
 
         using (StreamWriter sw = new StreamWriter(_logFile, true))
         {
-            sw.WriteLine($"{currTime1.ToString("HH:mm:ss.ff")} Start ({_testVersion}) ---Sync");
-
             int i = 0;
 
             using (SmtpClient smtp = new SmtpClient())

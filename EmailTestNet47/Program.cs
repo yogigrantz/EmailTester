@@ -17,7 +17,7 @@ namespace EmailTestNet47
             bool ssl = true;
 
             string destEmail = "yogi1002@mailinator.com";
-            string logFile = @"C:\Temp\EmailTestLog.txt";
+            string logFile = @"C:\Temp\EmailTestLog.txt"; // Please make sure C:\Temp directory exists
 
             EmailWithSystemNetMail emailSNM = new EmailWithSystemNetMail(host, username, password, port, ssl, logFile);
 

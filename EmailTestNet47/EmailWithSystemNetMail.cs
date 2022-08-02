@@ -34,7 +34,6 @@ namespace EmailTestNet47
 
             using (StreamWriter sw = new StreamWriter(_logFile, true))
             {
-                sw.WriteLine($"{currTime1.ToString("HH:mm:ss.ff")} Start ({_testVersion}) ---Async");
 
                 int i = 0;
 
@@ -74,8 +73,6 @@ namespace EmailTestNet47
 
             using (StreamWriter sw = new StreamWriter(_logFile, true))
             {
-                sw.WriteLine($"{currTime1.ToString("HH:mm:ss.ff")} Start ({_testVersion}) ---Sync");
-
                 int i = 0;
 
                 using (SmtpClient smtp = new SmtpClient())
