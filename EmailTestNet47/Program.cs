@@ -7,7 +7,7 @@ namespace EmailTestNet47
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Waiting 60 to let the .net 6 project finish up");
+            Console.WriteLine("Waiting a minute to let the .net 6 project finish up");
             System.Threading.Thread.Sleep(60000); // Allowing the other project to finish up
 
             string host = "smtp.ethereal.email";
