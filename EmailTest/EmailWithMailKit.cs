@@ -38,7 +38,8 @@ public class EmailWithMailKit
             using (SmtpClient smtp = new SmtpClient())
             {
                 smtp.Connect(_host, _port, _sso);
-                smtp.Authenticate(_username, _pwd);
+                if (!string.IsNullOrEmpty(_username) && !string.IsNullOrEmpty(_pwd))
+                    smtp.Authenticate(_username, _pwd);
                 smtp.Capabilities &= ~(SmtpCapabilities.Size | SmtpCapabilities.Chunking);
 
                 for (i = 0; i < nbrOfEmails; i++)
@@ -74,7 +75,8 @@ public class EmailWithMailKit
             using (SmtpClient smtp = new SmtpClient())
             {
                 smtp.Connect(_host, _port, _sso);
-                smtp.Authenticate(_username, _pwd);
+                if (!string.IsNullOrEmpty(_username) && !string.IsNullOrEmpty(_pwd))
+                    smtp.Authenticate(_username, _pwd);
                 smtp.Capabilities &= ~(SmtpCapabilities.Size | SmtpCapabilities.Chunking);
 
                 for (i = 0; i < nbrOfEmails; i++)

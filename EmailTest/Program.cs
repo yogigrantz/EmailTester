@@ -3,12 +3,14 @@ using MailKit.Security;
 
 try
 {
-  
+
     string host = "smtp.ethereal.email";
     string username = "brando.johnston@ethereal.email";
     string password = "HyFYHtAeprK7se94bT";
     int port = 587;
     bool ssl = true;
+
+
     SecureSocketOptions sso = SecureSocketOptions.StartTls;
     string destEmail = "yogi1002@mailinator.com";
     string logFile = @"C:\Temp\EmailTestLog.txt";

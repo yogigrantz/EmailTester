@@ -38,7 +38,8 @@ public class EmailWithSystemNetMail
             {
                 smtp.Port = _port;
                 smtp.Host = _host;
-                smtp.Credentials = new System.Net.NetworkCredential(_username, _pwd);
+                if (!string.IsNullOrEmpty(_username) && !string.IsNullOrEmpty(_pwd))
+                    smtp.Credentials = new System.Net.NetworkCredential(_username, _pwd);
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.EnableSsl = _ssl;
 
@@ -77,7 +78,8 @@ public class EmailWithSystemNetMail
             {
                 smtp.Port = _port;
                 smtp.Host = _host;
-                smtp.Credentials = new System.Net.NetworkCredential(_username, _pwd);
+                if (!string.IsNullOrEmpty(_username) && !string.IsNullOrEmpty(_pwd))
+                    smtp.Credentials = new System.Net.NetworkCredential(_username, _pwd);
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.EnableSsl = _ssl;
 

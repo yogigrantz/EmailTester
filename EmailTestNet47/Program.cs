@@ -15,6 +15,7 @@ namespace EmailTestNet47
             string password = "HyFYHtAeprK7se94bT";
             int port = 587;
             bool ssl = true;
+
             string destEmail = "yogi1002@mailinator.com";
             string logFile = @"C:\Temp\EmailTestLog.txt";
 
